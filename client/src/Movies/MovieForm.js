@@ -22,7 +22,7 @@ const MovieForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/api/movies/${id}`, movie)
+      .put(`http://localhost:5000/api/movies/${movie.id}`, movie)
       .then((res) => {
         const newMovieList = props.movies.map((m) => {
           if (m.id === movie.id) {
